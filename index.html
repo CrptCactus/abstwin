@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AbsTwin</title>
+</head>
+<body>
+
+<h2>AbsTwin</h2>
+<p>Find your onchain twin on Abstract</p>
+
+<input id="address" placeholder="Enter address" />
+<button onclick="go()">Find twin</button>
+
+<pre id="out"></pre>
+
+<script>
+function go() {
+  const fakeResult = {
+    similarity: 90,
+    match: {
+      address: "0x7f6e...303c1",
+      badges: 5,
+      tx: 120,
+      days: 40,
+      streak: 10,
+      app: "Uniswap"
+    }
+  };
+
+  document.getElementById("out").textContent =
+    JSON.stringify(fakeResult, null, 2);
+}
+</script>
+
+</body>
+</html>
+
